@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView android:id="@+id/imgvw"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:src="@mipmap/mpt"/>
+
+
+    <Button
+        android:id="@+id/btnRClk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgvw"
+        android:text="По часовой стрелке вращение"
+        app:layout_constraintTop_toBottomOf="@+id/imgvw"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnRAClk"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnRClk"
+        android:layout_toRightOf="@+id/btnRClk"
+        android:text="Против часовой стрелки вращение"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRClk"/>
+
+    <Button
+        android:id="@+id/btnFadeIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgvw"
+        android:text="Постепенно появление (In)"
+        app:layout_constraintTop_toBottomOf="@+id/btnRAClk" />
+
+    <Button
+        android:id="@+id/btnFadeOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnFadeIn"
+        android:layout_toRightOf="@+id/btnFadeIn"
+        android:text="Постепенное исчезновение (Out)"
+        app:layout_constraintTop_toBottomOf="@+id/btnFadeIn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
